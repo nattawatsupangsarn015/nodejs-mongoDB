@@ -5,3 +5,4 @@ GET {{localhost}}/api/
 
 ### GET ALL BOOKS
 GET {{localhost}}/api/books
+Authorization: Boy

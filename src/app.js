@@ -13,6 +13,12 @@ const connectMongo = async (req, res, next) => {
   next();
 };
 
+module.exports.middleware = (req, res, next) => {
+  if (req.headers.authorization === "Boy") {
+    next();
+  } else res.status(401).send("Unauthorize");
+};
+
 const api = require("./api/routes/api");
 
 app.use(bodyParser.json());

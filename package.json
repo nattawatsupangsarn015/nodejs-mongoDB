@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/app.js",
-    "install": "chmod u+x install_package.sh & ./install_package.sh & npm run db & npm run start",
-    "db": "mongoimport --db library --collection books --drop --file db/db.json --jsonArray"
+    "install": "chmod u+x install_package.sh & ./install_package.sh & npm run booksDB & npm run usersDB & npm run start",
+    "booksDB": "mongoimport --db library --collection books --drop --file db/booksDB.json --jsonArray",
+    "usersDB": "mongoimport --db library --collection users --drop --file db/usersDB.json --jsonArray"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.25"
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^5.9.25",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
   }
 }

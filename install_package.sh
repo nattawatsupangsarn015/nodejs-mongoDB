@@ -1,1 +1,1 @@
-npm i axios body-parser express cors mongoose
+npm i axios body-parser express cors mongoose dotenv jwt-simple passport passport-jwt --save
