@@ -1,0 +1,7 @@
+@localhost = http://localhost:8080
+
+### HOME
+GET {{localhost}}/api/
+
+### GET ALL BOOKS
+GET {{localhost}}/api/books
